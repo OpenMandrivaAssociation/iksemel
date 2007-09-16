@@ -1,10 +1,12 @@
 %define major 3
 %define libname %mklibname %{name} %{major}
+%define develname %mklibname %{name} -d
+%define staticdevelname %mklibname %{name} -d -s
 
 Summary:	Iksemel is an XML  parser library designed for Jabber applications
 Name:		iksemel
 Version:	1.2
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPL
 Group:		Networking/Instant messaging
 URL:		http://iksemel.jabberstudio.org/
@@ -31,14 +33,15 @@ thus highly portable.
 
 This package contains the shared %{name} library.
 
-%package -n	%{libname}-devel
+%package -n	%{develname}
 Summary:	Development files and headers for %{name}
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
 Provides:	%{libname}-devel = %{version}-%{release}
 Provides:	lib%{name}-devel = %{version}-%{release}
+Obsoletes:	%mklibname -d %name 3
 
-%description -n	%{libname}-devel
+%description -n	%{develname}
 iksemel is an XML (eXtensible Markup Language) parser library designed for
 Jabber applications. It is coded in ANSI C for POSIX compatible environments, 
 thus highly portable.
@@ -46,11 +49,13 @@ thus highly portable.
 This package contains the development library and its header files
 for the %{name} library.
 
-%package -n	%{libname}-static-devel
+%package -n	%{staticdevelname}
 Summary:	Static  %{name} development library
 Group:		Development/C
+Obsoletes:	%mklibname -s -d %name 3
+Requires:	%{develname} = %version-%release
 
-%description -n	%{libname}-static-devel
+%description -n	%{staticdevelname}
 iksemel is an XML (eXtensible Markup Language) parser library designed for
 Jabber applications. It is coded in ANSI C for POSIX compatible environments, 
 thus highly portable.
@@ -100,13 +105,13 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_libdir}/lib*.so.*
 
-%files -n %{libname}-devel
+%files -n %{develname}
 %defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/*.la
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*
 
-%files -n %{libname}-static-devel
+%files -n %{staticdevelname}
 %defattr(-,root,root)
 %{_libdir}/lib*%{name}*.a
