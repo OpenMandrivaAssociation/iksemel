@@ -11,8 +11,7 @@ License:	GPL
 Group:		Networking/Instant messaging
 URL:		http://iksemel.jabberstudio.org/
 Source0:	%{name}-%{version}.tar.bz2
-Requires(post):  install-info
-Requires(preun): install-info
+Requires(post,preun): info-install
 BuildRequires:	libtool
 BuildRequires:	libgnutls-devel >= 0.1.0
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
