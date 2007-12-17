@@ -14,7 +14,6 @@ Source0:	http://iksemel.googlecode.com/files/%{name}-%{version}.tar.gz
 Requires(post,preun): info-install
 BuildRequires:	libtool
 BuildRequires:	libgnutls-devel >= 0.1.0
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 iksemel is an XML (eXtensible Markup Language) parser library designed for
