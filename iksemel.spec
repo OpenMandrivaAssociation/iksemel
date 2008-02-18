@@ -3,7 +3,7 @@
 %define develname %mklibname %{name} -d
 %define staticdevelname %mklibname %{name} -d -s
 
-Summary:	Iksemel is an XML  parser library designed for Jabber applications
+Summary:	XML  parser library designed for Jabber applications
 Name:		iksemel
 Version:	1.3
 Release:	%mkrel 2
