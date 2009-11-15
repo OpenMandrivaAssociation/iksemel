@@ -5,8 +5,8 @@
 
 Summary:	XML  parser library designed for Jabber applications
 Name:		iksemel
-Version:	1.3
-Release:	%mkrel 5
+Version:	1.4
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Networking/Instant messaging
 URL:		http://iksemel.googlecode.com/
@@ -69,14 +69,8 @@ This package contains the static %{name} library.
 
 %build
 autoreconf -fi
-%configure2_5x \
-    --with-libgnutls-prefix=%{_prefix}
-
+%configure2_5x
 %make
-
-# make check barfs on x86_64
-#%%check
-#make check
 
 %install
 rm -rf %{buildroot}
