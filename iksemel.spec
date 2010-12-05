@@ -6,7 +6,7 @@
 Summary:	XML  parser library designed for Jabber applications
 Name:		iksemel
 Version:	1.4
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Networking/Instant messaging
 URL:		http://iksemel.googlecode.com/
