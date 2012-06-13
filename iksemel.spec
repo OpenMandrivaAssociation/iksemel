@@ -13,7 +13,7 @@ URL:		http://iksemel.googlecode.com/
 Source0:	http://iksemel.googlecode.com/files/%{name}-%{version}.tar.gz
 Patch0:		iksemel-1.3-gnutls-2.8.patch
 BuildRequires:	libtool
-BuildRequires:	libgnutls-devel >= 0.1.0
+BuildRequires:	pkgconfig(gnutls)
 
 %description
 iksemel is an XML (eXtensible Markup Language) parser library designed for
