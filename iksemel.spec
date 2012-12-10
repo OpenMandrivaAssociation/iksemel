@@ -88,3 +88,65 @@ rm -rf %{buildroot}
 
 %files -n %{staticdevelname}
 %{_libdir}/lib*%{name}*.a
+
+
+%changelog
+* Wed Jun 13 2012 Andrey Bondrov <abondrov@mandriva.org> 1.4-3
++ Revision: 805349
+- Fix BuildRequires
+- Drop some legacy junk
+
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 1.4-2mdv2011.0
++ Revision: 611177
+- rebuild
+
+* Sun Nov 15 2009 Funda Wang <fwang@mandriva.org> 1.4-1mdv2010.1
++ Revision: 466179
+- new version 1.4
+
+* Wed Jun 03 2009 Funda Wang <fwang@mandriva.org> 1.3-5mdv2010.0
++ Revision: 382373
+- rebuild for gnutls 2.8
+
+* Wed Jul 09 2008 Oden Eriksson <oeriksson@mandriva.com> 1.3-4mdv2009.0
++ Revision: 233037
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+* Mon Feb 18 2008 Thierry Vignaud <tv@mandriva.org> 1.3-3mdv2008.1
++ Revision: 170895
+- rebuild
+- fix "foobar is blabla" summary (=> "blabla") so that it looks nice in rpmdrake
+
+* Tue Jan 22 2008 Funda Wang <fwang@mandriva.org> 1.3-2mdv2008.1
++ Revision: 156358
+- rebuild
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Sun Dec 09 2007 Funda Wang <fwang@mandriva.org> 1.3-1mdv2008.1
++ Revision: 116648
+- New version 1.3
+
+* Sun Sep 16 2007 Funda Wang <fwang@mandriva.org> 1.2-3mdv2008.0
++ Revision: 87949
+- fix bu#26905
+- New devel package policy
+
+* Mon Jul 23 2007 Oden Eriksson <oeriksson@mandriva.com> 1.2-2mdv2008.0
++ Revision: 54741
+- Import iksemel
+
+
+
+* Mon Jun 19 2006 Oden Eriksson <oeriksson@mandriva.com> 1.2-2mdv2007.0
+- spec file attack
+
+* Sun Dec 11 2005 Emmanuel Blindauer <blindauer@mandriva.org> 1.2-1mdk
+- First Mandrakelinux release
