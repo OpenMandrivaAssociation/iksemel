@@ -65,12 +65,11 @@ This package contains the static %{name} library.
 %patch0 -p0
 
 %build
-autoreconf -fi
-%configure2_5x
+autoreconf -fiv
+%configure2_5x --enable-static
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %files
