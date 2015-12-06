@@ -11,7 +11,8 @@ License:	GPLv2+
 Group:		Networking/Instant messaging
 URL:		https://github.com/meduketto/iksemel
 Source0:	http://iksemel.googlecode.com/files/%{name}-%{version}.tar.gz
-Patch0:		iksemel-1.3-gnutls-2.8.patch
+Patch0:		0001-Fix-issues-compiling-with-newer-gnutls.patch
+Patch1:		secure_gnutls_options.patch
 BuildRequires:	libtool
 BuildRequires:	pkgconfig(gnutls)
 
@@ -62,7 +63,7 @@ This package contains the static %{name} library.
 
 %prep
 %setup -q
-%patch0 -p0
+%apply_patches
 
 %build
 autoreconf -fiv
